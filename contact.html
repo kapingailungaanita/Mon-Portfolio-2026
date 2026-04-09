@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mon Portfolio</title>
     <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/contact.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -23,16 +24,46 @@
             </ul>
         </nav>
     </header>
-   <main>
-      <h1>Contactez-nous</h1>
-   </main>
-    <footer>
+  <main>
+    <section class="contact-section">
+        <h2>Travaillons ensemble</h2>
+        <p class="subtitle">Basé à Lubumbashi, disponible pour vos projets.</p>
+        
+        <div class="contact-wrapper">
+            <!-- Formulaire -->
+            <form class="contact-form">
+                <div class="input-group">
+                    <label>Nom complet</label>
+                    <input type="text" placeholder="Entrez votre nom">
+                </div>
+                <div class="input-group">
+                    <label>Numéro de téléphone</label>
+                    <input type="tel" placeholder="+243 849 517 626">
+                </div>
+                <button type="submit">Envoyer ma demande</button>
+            </form>
+
+            <!-- Liens de contact -->
+            <div class="contact-links">
+                <h3>Contact direct</h3>
+                <a href="https://wa.me/243849517626" class="btn-contact whatsapp" target="_blank">
+                    <i class="fa-brands fa-whatsapp"></i> WhatsApp
+                </a>
+                <a href="https://t.me/243849517626" class="btn-contact telegram" target="_blank">
+                    <i class="fa-brands fa-telegram"></i> Telegram
+                </a>
+            </div>
+        </div>
+    </section>
+</main>
+
+    < <footer>
         <section>
             <div>
                 <p>&copy;2026 Anita. Tous droits réservés.</p>
-                <img src="image/link.png" alt="link" width="15">
-                <img src="image/git.png" alt="git" width="15">
-                <img src="image/twitt.png" alt="twitt" width="15">
+                <a href="linkedin"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="github"><i class="fa-brands fa-github"></i></a>
+                <a href="X.Code"><i class="fa-brands fa-x-twitter"></i></a>                
             </div>
         </section>
     </footer>
