@@ -1,0 +1,153 @@
+ /* --- VARIABLES & RESET --- */
+:root {
+    --violet-principal: #6c63ff;
+    --violet-clair: #f0efff;
+    --gris-fond: #f5f5f5;
+    --gris-texte: #555;
+    --blanc: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* --- SECTION PRINCIPALE --- */
+.projects {
+    padding: 60px 10% ;
+    background: var(--gris-tres-clair);
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.projects h1 {
+    font-size: 36px;
+    color: var(--violet-doux);
+    margin-bottom: 10px;
+}
+
+.underline {
+    width: 60px;
+    height: 4px;
+    background: var(--violet-doux);
+    margin: 0 auto 40px;
+    border-radius: 2px;
+}
+
+/* --- SECTION PHILOSOPHIE & DEFI --- */
+.passion-intro {
+    max-width: 850px;
+    margin: 0 auto 50px;
+    background: var(--blanc);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    border-left: 6px solid var(--violet-principal);
+    text-align: left;
+}
+
+.passion-intro p {
+    font-size: 17px;
+    color: var(--gris-texte);
+    line-height: 1.8;
+}
+
+.passion-intro strong {
+    color: var(--violet-principal);
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 1.2px;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+/* --- GRILLE DES CARTES --- */
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 35px;
+    margin-top: 20px;
+}
+
+/* --- STYLE DES CARTES --- */
+.card {
+    background: var(--blanc);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 15px 35px rgba(108, 99, 255, 0.2);
+}
+
+/* IMAGE */
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 4px solid var(--violet-principal);
+}
+
+/* CONTENU DE LA CARTE */
+.card-content {
+    padding: 25px;
+    text-align: left;
+    flex-grow: 1;
+}
+
+.card-content h3 {
+    color: var(--violet-principal);
+    margin-bottom: 12px;
+    font-size: 22px;
+}
+
+.card-content p {
+    font-size: 15px;
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+/* --- TAGS / COMPETENCES --- */
+.tags {
+    margin-top: auto;
+}
+
+.tags span {
+    display: inline-block;
+    background: var(--violet-clair);
+    color: var(--violet-principal);
+    padding: 6px 14px;
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: 700;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    transition: 0.3s;
+}
+
+.tags span:hover {
+    background: var(--violet-principal);
+    color: var(--blanc);
+}
+
+/* --- RESPONSIVITE --- */
+@media (max-width: 768px) {
+    .projects {
+        padding: 40px 5%;
+    }
+    
+    .projects h1 {
+        font-size: 28px;
+    }
+
+    .passion-intro {
+        padding: 20px;
+    }
+}

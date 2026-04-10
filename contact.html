@@ -24,48 +24,63 @@
             </ul>
         </nav>
     </header>
-  <main>
-    <section class="contact-section">
-        <h2>Travaillons ensemble</h2>
-        <p class="subtitle">Basé à Lubumbashi, disponible pour vos projets.</p>
-        
-        <div class="contact-wrapper">
-            <!-- Formulaire -->
-            <form class="contact-form">
-                <div class="input-group">
-                    <label>Nom complet</label>
-                    <input type="text" placeholder="Entrez votre nom">
+ 
+    <main>
+        <section class="apropos">
+            <div>
+                <h2>Contactez-Nous</h2>
+                <p>Un projet en tête ou une question ? N'hésitez pas à m'écrire via le formulaire ou directement sur mes messageries.</p>
+            </div>
+        </section>
+
+        <section class="contact-container">
+            
+            <form action="#" method="post" class="contact-form">
+                <div class="form-group">
+                    <label for="nom">Votre Nom</label>
+                    <input type="text" id="nom" name="nom" placeholder="Ex: Jean Dupont" required>
                 </div>
-                <div class="input-group">
-                    <label>Numéro de téléphone</label>
-                    <input type="tel" placeholder="+243 849 517 626">
+                <div class="form-group">
+                    <label for="telephone">Votre Numéro</label>
+                    <input type="tel" id="telephone" name="telephone" placeholder="Ex: +243..." required>
                 </div>
-                <button type="submit">Envoyer ma demande</button>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Votre message ici..."></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Envoyer le message</button>
             </form>
 
-            <!-- Liens de contact -->
-            <div class="contact-links">
-                <h3>Contact direct</h3>
-                <a href="https://wa.me/243849517626" class="btn-contact whatsapp" target="_blank">
-                    <i class="fa-brands fa-whatsapp"></i> WhatsApp
-                </a>
-                <a href="https://t.me/243849517626" class="btn-contact telegram" target="_blank">
-                    <i class="fa-brands fa-telegram"></i> Telegram
-                </a>
+            <div class="direct-contact">
+                <h3>Mes Coordonnées</h3>
+                <p><strong>Téléphone :</strong> +243 975 179 538</p>
+                <div class="social-buttons">
+                    <a href="https://wa.me/243975179538" class="btn-social whatsapp" target="_blank">
+                        WhatsApp
+                    </a>
+                    <a href="https://t.me/+243975179538" class="btn-social telegram" target="_blank">
+                        Telegram
+                    </a>
+                </div>
             </div>
-        </div>
-    </section>
-</main>
 
-    < <footer>
+        </section>
+    </main>
+
+   
+
+
+    <footer>
         <section>
             <div>
-                <p>&copy;2026 Anita. Tous droits réservés.</p>
-                <a href="linkedin"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="github"><i class="fa-brands fa-github"></i></a>
-                <a href="X.Code"><i class="fa-brands fa-x-twitter"></i></a>                
+                <p>&copy; 2026 Anita. Tous droits réservés.</p>
+                <div class="footer-icons">
+                    <a href="https://linkedin.com/in/ton-profil" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/ton-pseudo" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
             </div>
         </section>
     </footer>
 </body>
-</html>
+</html>    

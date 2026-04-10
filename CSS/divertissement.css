@@ -6,22 +6,31 @@
     --bg-light: #f8fafc;
     --white: #ffffff;
     --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-    --border-color: #eef2ff; /* Couleur pour la ligne de séparation */
+    --border-color: #eef2ff;
 }
 
 /* --- Styles Généraux --- */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: var(--gris-tres-clair);
+    background-color: var(--bg-light);
     margin: 0;
     padding: 0;
 }
 
 .projects {
-    max-width: 1200px; /* Légèrement élargi pour plus d'espace */
+    max-width: 1200px;
     margin: 60px auto;
     padding: 20px;
     text-align: center;
+}
+
+/* Style spécifique pour l'introduction de la page divertissement */
+.intro-tech {
+    max-width: 800px;
+    margin: 0 auto 50px;
+    color: var(--text-light);
+    font-size: 1.1rem;
+    line-height: 1.7;
 }
 
 /* --- Titre --- */
@@ -35,19 +44,19 @@ body {
 .underline {
     width: 70px;
     height: 5px;
-    background-color: var(--primary-color);
+    background-color: var(--gris-tres-clair);
     margin: 0 auto 60px;
     border-radius: 3px;
 }
 
-/* --- Grille de projets (Garantit la même grandeur des rectangles) --- */
+/* --- Grille --- */
 .projects-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); /* Cartes un peu plus larges */
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
     gap: 30px;
 }
 
-/* --- Style de la Carte (Flexbox pour l'alignement vertical interne) --- */
+/* --- Style de la Carte --- */
 .card {
     background: var(--white);
     border-radius: 16px;
@@ -55,8 +64,6 @@ body {
     box-shadow: var(--shadow);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: left;
-    
-    /* Force la carte à utiliser Flexbox */
     display: flex;
     flex-direction: column;
 }
@@ -76,12 +83,11 @@ body {
 /* --- Contenu de la Carte --- */
 .card-content {
     padding: 25px;
-    flex-grow: 1; /* Aligne le contenu pour remplir la carte */
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
 }
 
-/* Regroupe le titre et le paragraphe */
 .card-text-wrapper {
     margin-bottom: 20px;
 }
@@ -100,12 +106,11 @@ body {
     margin: 0;
 }
 
-/* --- Footer de la carte (Poussé vers le bas) --- */
+/* --- Footer de la carte (Boutons en bas) --- */
 .card-footer {
-    margin-top: auto; /* C'est ICI que la magie opère : pousse le footer vers le bas */
+    margin-top: auto;
 }
 
-/* --- Tags --- */
 .tags {
     margin-bottom: 20px;
     display: flex;
@@ -124,12 +129,11 @@ body {
     letter-spacing: 0.5px;
 }
 
-/* --- Liens / Boutons (La ligne de séparation) --- */
 .links {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-top: 2px solid var(--border-color); /* La ligne est maintenant alignée */
+    border-top: 2px solid var(--border-color);
     padding-top: 18px;
 }
 
@@ -142,11 +146,6 @@ body {
     align-items: center;
     gap: 8px;
     transition: color 0.2s;
-}
-
-/* Style spécifique pour l'icône Figma dans le dernier projet */
-.links a .fa-figma {
-    color: #a259ff; /* Couleur violette de Figma */
 }
 
 .links a:hover {
@@ -163,4 +162,37 @@ body {
     .projects-title {
         font-size: 2.2rem;
     }
+}
+/* Positionnement magique pour les pages courtes */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* On pousse le footer vers le bas */
+footer {
+    margin-top: auto; 
+    padding: 20px 0;
+    text-align: center;
+    background-color: #f4f4f4; /* Modifie la couleur selon tes goûts */
+}
+
+/* Style des icônes (identique à ton intention) */
+footer a {
+    margin: 0 10px;
+    font-size: 1.5rem;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #0077b5; /* Changement de couleur au survol */
+}
+
+footer p {
+    margin-bottom: 10px;
+    font-family: sans-serif;
 }

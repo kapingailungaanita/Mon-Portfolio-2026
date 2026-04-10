@@ -1,65 +1,84 @@
-/* Style pour la mise en page contact */
-.contact-section {
-    padding: 60px 20px;
-    max-width: 900px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.contact-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    margin-top: 40px;
+.contact-container {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    max-width: 1000px;
+    margin: 0 auto 5rem auto;
+    padding: 0 2rem;
+    flex-wrap: wrap;
 }
 
 .contact-form {
-    background: #fff;
-    padding: 30px;
+    background: white;
+    padding: 2rem;
     border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    flex: 1;
+    min-width: 300px;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
     text-align: left;
 }
 
-.input-group { margin-bottom: 20px; }
-.input-group label { display: block; margin-bottom: 8px; font-weight: bold; }
-.input-group input { width: 100%; padding: 12px; border: 2px solid #eee; border-radius: 8px; }
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--gris-tres-fonce);
+}
 
-.contact-form button {
+.form-group input, .form-group textarea {
     width: 100%;
     padding: 12px;
-    background: #007bff;
+    border: 1px solid var(--gris-clair);
+    border-radius: 8px;
+    font-family: inherit;
+}
+
+.btn-submit {
+    background-color: var(--violet-doux);
     color: white;
     border: none;
-    border-radius: 15px;
+    padding: 12px 25px;
+    border-radius: 50px;
     cursor: pointer;
-    font-weight: bold;
-    
+    font-weight: 600;
+    width: 100%;
+    transition: background 0.3s ease;
 }
 
-/* Styles pour les boutons WhatsApp et Telegram */
-.contact-links { display: flex; flex-direction: column; gap: 20px; justify-content: center; }
+.btn-submit:hover {
+    background-color: var(--violet-fonce);
+}
 
-.btn-contact {
+.direct-contact {
+    flex: 1;
+    min-width: 300px;
+    text-align: left;
+}
+
+.social-buttons {
     display: flex;
-    align-items: center;
-    justify-content: center;
     gap: 10px;
-    padding: 15px 25px;
-    border-radius: 10px;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    transition: transform 0.3s ease;
+    margin-top: 1.5rem;
 }
 
-.btn-contact:hover { transform: scale(1.05); }
+.btn-social {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-align: center;
+    flex: 1;
+}
 
 .whatsapp { background-color: #25D366; }
 .telegram { background-color: #0088cc; }
-/* Responsive */
-@media (max-width: 768px) {
-    .contact-wrapper { grid-template-columns: 1fr; }
+
+.btn-social:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
 }
-
-
